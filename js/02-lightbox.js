@@ -20,9 +20,6 @@ function createImagesListMarkup(items) {
     .join("");
 }
 
-const links = galleryContainer.querySelectorAll(".gallery__item");
-links.forEach((el) => el.addEventListener("click", (e) => e.preventDefault()));
-
 let lightbox = new SimpleLightbox(".gallery a", {
   captionsData: "alt",
   captionDelay: "250",

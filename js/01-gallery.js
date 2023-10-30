@@ -26,11 +26,10 @@ function createImageListMarkup(items) {
 
 const links = galleryContainer.querySelectorAll(".gallery__link");
 
-links.forEach((el) => el.addEventListener("click", (e) => e.preventDefault()));
-
 galleryContainer.addEventListener("click", onImageClick);
 
 function onImageClick(event) {
+  event.preventDefault();
   if (event.target.nodeName === "IMG") {
     const instance = basicLightbox.create(
       `<img src="${event.target.dataset.source}" width="800" height="600">`
